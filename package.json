@@ -1,0 +1,15 @@
+{
+  "name": "shopee-js",
+  "version": "1.0.0",
+  "description": "clone shopee v1",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass asset/sass/main.scss asset/css/style.css -w"
+  },
+  "author": "HungTruong",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,93 @@
+.footer {
+  background: $color-white;
+  border-top: 4px solid $color-primary-dark;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    padding: 2rem 0;
+  }
+}
+
+.footer-4 {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: $color-price-original;
+
+  &__heading {
+    text-transform: uppercase;
+
+    font-weight: 700;
+    margin: 4rem 0 2rem;
+  }
+
+  &__body {
+    display: block;
+    margin-bottom: 2.5rem;
+    padding: 0;
+  }
+}
+
+.footer-icon-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.payment-type-img {
+  width: 5.5rem;
+  height: 3.9rem;
+  margin-left: 0.8rem;
+  margin-bottom: 0.8rem;
+  overflow: hidden;
+  background-image: url(https://laz-img-cdn.alicdn.com/tfs/TB1dFECEMTqK1RjSZPhXXXfOFXa-986-931.png);
+
+  &.visa {
+    background-position: -768px -768px;
+  }
+
+  &.mastercard {
+    background-position: -329px -768px;
+  }
+
+  &.jcb {
+    background-position: -282px -828px;
+  }
+
+  &.cod {
+    background-position: -209px -829px;
+  }
+
+  &.napas {
+    background-position: -574px -830px;
+  }
+}
+
+.footer-li {
+  text-transform: capitalize;
+  list-style: none;
+  margin-bottom: 1.2rem;
+
+  & a {
+    text-decoration: none;
+    color: $color-text;
+  }
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  border-top: 0.5px solid $color-shadow;
+  padding: 1rem;
+
+  &--link {
+    text-decoration: none;
+    color: $color-primary;
+    border-right: 0.5px solid $color-shadow;
+    padding-right: 1rem;
+  }
+
+  &--text {
+    padding-left: 1rem;
+  }
+}

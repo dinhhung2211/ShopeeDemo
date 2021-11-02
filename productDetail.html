@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./asset/fonts/fontawesome-free-5.15.3-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./asset/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="./asset/slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <link rel="stylesheet" href="./asset/load-awesome-1.1.0/css/ball-fussion.min.css">
+    <link rel="stylesheet" href="./asset/load-awesome-1.1.0/css/ball-pulse.min.css">
+</head>
+
+<body>
+
+    <div class="main">
+        <header class="header">
+
+            <nav class="header__navbar grid">
+                <ul class="header__navbar-list">
+                    <li class="header__navbar-item header__navbar-item--separate">
+                        Kênh người bán
+                    </li>
+                    <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate">
+                        Tải ứng dụng
+                        <!-- Header QR Code -->
+                        <div class="header__qr">
+                            <img src="./asset/img/QR_Code.png" alt="QR Code" class="header__qr-img">
+                            <div class="header__qr-apps">
+                                <a href="" class="header__qr-link"><img src="./asset/img/google_play.png"
+                                        alt="Google play" class="header__qr-download-img"></a>
+                                <a href="" class="header__qr-link"><img src="./asset/img/app_store.png" alt="App store"
+                                        class="header__qr-download-img"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="header__navbar-item">
+                        <span class="header__navbar-item--no-pointer">Kết nối</span>
+                        <a class="header__navbar-icon-link" href="">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a class="header__navbar-icon-link" href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="header__navbar-list">
+                    <li class="header__navbar-item header__navbar-item--has-notify">
+                        <a href="" class="header__navbar-item-link">
+                            <i class="far fa-bell"></i>
+                            Thông báo
+                        </a>
+                        <!-- Header Notify -->
+                        <div class="header__notify">
+                            <div class="header__notify-heading">
+                                <h3>Thông Báo Mới Nhận</h3>
+                            </div>
+                            <div class="header__notify-body">
+                                <ul class="header__notify-list">
+                                    <li class="header__notify-item header__notify-item--viewed">
+                                        <a href="" class="header__notify-link">
+                                            <img src="./asset/img/notify1.jpeg" alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <p class="header__notify-name">Siêu sale shop mới giảm 50%</p>
+                                                <p class="header__notify-description">Tiêu dùng, điện tử, mua sắm
+                                                    giảm 50%. Săn voucher ngay!</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item header__notify-item--viewed">
+                                        <a href="" class="header__notify-link">
+                                            <img src="./asset/img/notify2.jpeg" alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <p class="header__notify-name">Siêu sale shop mới giảm 50%</p>
+                                                <p class="header__notify-description">Tiêu dùng, điện tử, mua sắm
+                                                    giảm 50%. Săn voucher ngay!</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item">
+                                        <a href="" class="header__notify-link">
+                                            <img src="./asset/img/notify3.jpeg" alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <p class="header__notify-name">Siêu sale shop mới giảm 50%</p>
+                                                <p class="header__notify-description">Tiêu dùng, điện tử, mua sắm
+                                                    giảm 50%. Săn voucher ngay!</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <footer class="header__notify-footer">
+                                <a href="" class="header__notify-button">Xem tất cả</a>
+                            </footer>
+                        </div>
+                    </li>
+                    <li class="header__navbar-item">
+                        <a href="" class="header__navbar-item-link">
+                            <i class="far fa-question-circle"></i>
+                            Trợ giúp
+                        </a>
+                    </li>
+                    <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate">
+                        <a href="signup.html" class="header__navbar-item-link">
+                            Đăng ký
+                        </a>
+                    </li>
+                    <li class="header__navbar-item header__navbar-item--strong">
+                        <a href="login.html" class="header__navbar-item-link">
+                            Đăng nhập
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__main grid">
+                <div class="header__logo-box">
+                    <a href="/">
+                        <img src="./asset/img/logo-white.png" alt="logo" class="header__logo">
+                    </a>
+                </div>
+                <div class="header__searchbar">
+                    <form class="searchbar-input">
+                        <input type="text" name="" id="" class="searchbar-input__input"
+                            placeholder="Freeship với các đơn hàng mua trên web">
+                    </form>
+                    <button class="btn btn-primary btn--s">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="header__cart">
+                    <div class="header__cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div id="header__cart-number"></div>
+                </div>
+            </div>
+        </header>
+        <div class="container grid">
+
+        </div>
+    </div>
+    </div>
+    <footer class="footer">
+        <div class="footer__container grid">
+            <div class="footer-4">
+                <div class="footer-4__heading">
+                    Về TiLaShop
+                </div>
+                <div class="footer-4__body">
+                    <span class="about-us">
+                        TiLaShop được lấy cảm hứng từ 3 sàn thương mại điện tử lớn nhất Việt Nam là Tiki, Lazada,
+                        Shopee.
+                        Giao diện được làm theo giao diện của Shopee. Một sản phẩm front-end của Trương Đình Hùng.
+                        Sử dụng RESTAPI để lấy danh mục và sản phẩm.
+                    </span>
+                </div>
+            </div>
+            <div class="footer-4">
+                <div class="footer-4__heading">
+                    Thanh toán
+                </div>
+                <div class="footer-4__body">
+                    <div class="footer-icon-box">
+                        <div class="payment-type-img visa"></div>
+                        <div class="payment-type-img mastercard"></div>
+                        <div class="payment-type-img jcb"></div>
+                        <div class="payment-type-img cod"></div>
+                        <div class="payment-type-img napas"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-4">
+                <div class="footer-4__heading">
+                    Chính sách
+                </div>
+                <ul class="footer-4__body">
+                    <li class="footer-li"><a href="">Chính sách bảo mật</a></li>
+                    <li class="footer-li"><a href="">Chính sách giao hàng</a></li>
+                    <li class="footer-li"><a href="">Chính sách đổi trả</a></li>
+                    <li class="footer-li"><a href="">Chính sách bảo hành</a></li>
+                </ul>
+            </div>
+            <div class="footer-4">
+                <div class="footer-4__heading">
+                    Chăm sóc khách hàng
+                </div>
+                <ul class="footer-4__body">
+                    <li class="footer-li"><a href="">Trung tâm trợ giúp</a></li>
+                    <li class="footer-li"><a href="">Chăm sóc khách hàng</a></li>
+                    <li class="footer-li"><a href="">Hướng dẫn mua hàng</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <a href="" class="copyright--link">© Truong Dinh Hung</a>
+            <div class="copyright--text">Một sản phẩm front-end của Trương Đình Hùng</div>
+        </div>
+    </footer>
+    <!-- Loading layout -->
+    <div class="loading">
+        <div class="loading__overlay"></div>
+        <div class="loading__body">
+            <div class="la-ball-fussion la-dark">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal layout -->
+    <div class="modal">
+        <div class="shop-modal__transition-enter-done" id="popup">
+
+        </div>
+    </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./asset/slick-1.8.1/slick/slick.min.js"></script>
+    <!-- <script src="./asset/js/ui.js"></script>
+    <script src="./asset/js/api.js"></script>
+    <script src="./asset/js/app.js"></script> -->
+</body>
+
+</html>

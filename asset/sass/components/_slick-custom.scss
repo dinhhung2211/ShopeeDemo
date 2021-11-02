@@ -1,0 +1,45 @@
+.slick-dots {
+  bottom: 15px;
+
+  & li.slick-active button:before {
+    color: $color-primary;
+  }
+
+  & li button:before {
+    font-size: 10px;
+  }
+}
+
+.slick-prev {
+  opacity: 0;
+  width: 3.5rem;
+  height: 6rem;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.18);
+  z-index: 100;
+
+  &:hover,
+  &:focus {
+    background-color: rgba(0, 0, 0, 0.32);
+  }
+}
+
+.slick-next {
+  opacity: 0;
+  width: 3.5rem;
+  height: 6rem;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.18);
+  z-index: 100;
+
+  &:hover,
+  &:focus {
+    background-color: rgba(0, 0, 0, 0.32);
+  }
+}
+
+.slick-slide img {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}

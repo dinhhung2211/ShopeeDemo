@@ -1,0 +1,15 @@
+.login-wapper {
+  background-color: $color-primary-dark;
+}
+
+.login {
+  background-image: url('../img/login-background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 104rem;
+  height: 60rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}

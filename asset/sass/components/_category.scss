@@ -1,0 +1,29 @@
+.category-list {
+  &__header {
+    display: flex;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: $color-text;
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    border-bottom: $border-black-05;
+    margin-bottom: 0.625rem;
+    align-items: center;
+  }
+
+  &__category-link {
+    color: $color-text;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    font-weight: 400;
+    padding: 1rem;
+    cursor: pointer;
+  }
+  .category-link--active {
+    color: $color-primary;
+  }
+}

@@ -1,0 +1,139 @@
+.btn {
+  text-decoration: none;
+  border: none;
+  border-radius: 2px;
+  font-size: 1.5rem;
+  padding: 0 1.2rem;
+  outline: none;
+  cursor: pointer;
+  color: $color-grey-dark-2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &--s {
+    height: 3.4rem;
+    padding: 0 1.5rem;
+  }
+}
+
+.btn-primary {
+  color: $color-white;
+  background-color: $color-primary;
+}
+
+.btn-solid {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-white;
+  border-radius: 2px;
+  line-height: 1;
+  font-size: 1.4rem;
+
+  &--primary {
+    background-color: $color-primary;
+  }
+}
+
+.btn-filter {
+  height: 3rem;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  width: 100%;
+}
+
+.btn-outline {
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: $border-black-09;
+  border-radius: 2px;
+  color: $color-text;
+  background-color: transparent;
+
+  &--disabled {
+    background: $color-grey-light-3;
+    color: $color-disable;
+  }
+}
+
+.btn-no-outline {
+  outline: none;
+  cursor: pointer;
+  border: 0;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-text;
+  background-color: transparent;
+}
+
+.page-controller .btn-no-outline,
+.page-controller .btn-solid {
+  padding: 0;
+  height: 3rem;
+  min-width: 4rem;
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 1.5rem;
+}
+
+.page-controller .btn-no-outline {
+  color: $color-page-numbers;
+}
+
+.page-controller .btn-solid {
+  color: $color-white;
+}
+
+.btn-authen {
+  height: 4rem;
+  min-width: 31.7rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  padding: 0 1rem;
+  border-radius: 2px;
+  outline: none;
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+}
+
+.btn-signup {
+  margin-bottom: 3rem;
+}
+
+.icon-btn {
+  background: transparent;
+  padding: 0;
+
+  &--left {
+    border: 0;
+    margin-right: 1.5rem;
+    height: 3rem;
+    min-width: 4rem;
+  }
+
+  &--right {
+    border: 0;
+    margin-left: 1.5rem;
+    height: 3rem;
+    min-width: 4rem;
+  }
+}

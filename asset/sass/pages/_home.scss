@@ -1,0 +1,50 @@
+.container {
+  margin-top: 14.9rem;
+}
+
+.full-home-banners {
+  display: flex;
+  height: 23.5rem;
+
+  &__left {
+    box-shadow: 0 1px 1px 0 $color-white;
+    border-radius: 0.125rem;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    flex: 2 1 0;
+    overflow: hidden;
+    margin-right: 0.5rem;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+    overflow: hidden;
+  }
+
+  &__right-banner {
+    overflow: hidden;
+
+    & img {
+      width: 100%;
+    }
+    &:last-child {
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+.full-home-products {
+  display: flex;
+  margin-top: 2rem;
+
+  &__filter-panel {
+    flex: 0 0 19rem;
+    margin: 0 1.25rem 1.25rem 0;
+  }
+
+  &__main {
+    flex: 1;
+  }
+}
