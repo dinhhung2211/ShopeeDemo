@@ -14,6 +14,10 @@
     position: relative;
     height: 3.4rem;
 
+    @include responsive(tab-land) {
+      display: none;
+    }
+
     &-list {
       list-style: none;
       padding-left: 0;
@@ -228,12 +232,27 @@
     align-items: center;
     padding: 1rem 0 0.625rem;
     width: inherit;
-    max-width: 1200px;
+    max-width: 120rem;
     height: 8.5rem;
+
+    @include responsive(tab-land) {
+      max-width: 100%;
+    }
+
+    // @include responsive(phone) {
+    //   max-width: 50rem;
+    // }
   }
 
   &__logo-box {
     padding-right: 4.5rem;
+
+    @include responsive(tab-land) {
+      padding: 0 5rem;
+    }
+    @include responsive(phone) {
+      padding: 0 2rem;
+    }
   }
 
   &__logo {
@@ -249,6 +268,14 @@
     border-radius: 2px;
     background-color: $color-white;
     padding: 0.3rem;
+
+    @include responsive(tab-land) {
+      width: 65%;
+    }
+
+    @include responsive(phone) {
+      flex: 1;
+    }
   }
 
   &__cart {
@@ -256,6 +283,11 @@
     flex: 1;
     justify-content: center;
     align-items: center;
+
+    @include responsive(tab-land) {
+      width: 8.5rem;
+      flex: none;
+    }
   }
 
   &__cart-icon {

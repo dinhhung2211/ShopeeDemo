@@ -1,5 +1,5 @@
 // @import 'abstracts/functions';
-// @import 'abstracts/mixins';
+@import 'abstracts/mixin';
 @import 'abstracts/variables';
 
 @import 'base/animations';
@@ -12,6 +12,7 @@
 @import 'components/category';
 @import 'components/item-box';
 @import 'components/loading';
+@import 'components/mobile-category';
 @import 'components/modal';
 @import 'components/page-numbers';
 @import 'components/price-range-filter';

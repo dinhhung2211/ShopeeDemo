@@ -121,7 +121,11 @@
             <div class="header__main grid">
                 <div class="header__logo-box">
                     <a href="/">
-                        <img src="./asset/img/logo-white.png" alt="logo" class="header__logo">
+                        <picture>
+                            <source media="(min-width: 56.25em)" srcset="./asset/img/logo-white.png">
+                            <source media="(max-width: 37.5em)" srcset="./asset/img/logo-mobile.png">
+                            <img src="./asset/img/logo-white.png" alt="logo" class="header__logo">
+                        </picture>
                     </a>
                 </div>
                 <div class="header__searchbar">
@@ -160,14 +164,26 @@
                 </div>
                 <div class="full-home-banners__right">
                     <div class="full-home-banners__right-banner">
-                        <a href="https://shopee.vn/m/dat-do-an-online-shopeefood">
+                        <a href="#">
                             <img src="https://cf.shopee.vn/file/112a0865540b94e5fdb3083fcb67645e_xhdpi" alt="">
                         </a>
                     </div>
                     <div class="full-home-banners__right-banner">
-                        <a href="https://shopee.vn/m/shopeelive-shopmoi">
+                        <a href="#">
                             <img src="https://cf.shopee.vn/file/b00a5f5f051c1b076eb815fde715aef4_xhdpi" alt="">
                         </a>
+                    </div>
+                </div>
+            </div>
+            <div class="full-home-category">
+                <div class="mobile-category">
+                    <div class="mobile-category__header">
+                        <div class="mobile-category__header-title">
+                            Danh mục
+                        </div>
+                    </div>
+                    <div class="mobile-category__body">
+                        <!--Render JS: ui.js-->
                     </div>
                 </div>
             </div>
@@ -182,81 +198,20 @@
                             <!--Render JS: ui.js-->
                         </div>
                     </div>
-                    <div class="search-filter">
-                        <i class="fas fa-filter mr-1"></i>
-                        Bộ lọc tìm kiếm
-                    </div>
-                    <div class="filter-group locations-filter">
-                        <div class="filter-group__header">Nơi bán</div>
-                        <div class="filter-group__item">
-                            <div class="item-checkbox-filter">
-                                <div class="item-checkbox">
-                                    <label class="item-checkbox__control">
-                                        <input type="checkbox" value="Hà Nội">
-                                        <div class="item-checkbox__box">
-                                            &nbsp;
-                                        </div>
-                                        <span class="item-checkbox__label">Hà Nội</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="item-checkbox-filter">
-                                <div class="item-checkbox">
-                                    <label class="item-checkbox__control">
-                                        <input type="checkbox" value="TP. Hồ Chí Minh">
-                                        <div class="item-checkbox__box item-checkbox__box--checked">
-                                            <i class="fas fa-check item-checkbox__tick"></i>
-                                        </div>
-                                        <span class="item-checkbox__label">TP. Hồ Chí Minh</span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="filter-group price-range-filter">
-                        <div class="filter-group__header price-range-filter__header">Khoảng giá</div>
-                        <div class="price-range-filter__edit">
-                            <div class="price-range-filter__inputs">
-                                <input type="text" class="price-range-filter__input" maxlength="13" placeholder="đ TỪ">
-                                <div class="price-range-filter__range-line"></div>
-                                <input type="text" class="price-range-filter__input" maxlength="13" placeholder="đ ĐẾN">
-                            </div>
-                            <button class="btn-solid btn-solid--primary btn-filter">Áp dụng</button>
-                        </div>
-                    </div>
-                    <div class="filter-group">
-                        <button class="btn-solid btn-solid--primary btn-filter">Xóa tất cả</button>
-                    </div>
                 </div>
                 <div class="full-home-products__main">
 
                     <div class="search-item-result">
-                        <!-- <div class="loading-products">
-                            <div class="loading-products__overlay">
-                                <div class="la-ball-pulse la-dark">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                            </div>
-                            <div class="loading-products__body">
-                                <div class="la-ball-pulse la-dark">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                            </div>
-                        </div> -->
                         <div class="sort-bar">
                             <div class="sort-bar__label">Sắp xếp theo</div>
                             <div class="sort-by-options">
-                                <div class="sort-by-options__option sort-by-options__option--selected">
+                                <div class="sort-by-options__option relevancy-option sort-by-options__option--selected">
                                     Phổ biến
                                 </div>
-                                <div class="sort-by-options__option">
+                                <div class="sort-by-options__option newest-option">
                                     Mới nhất
                                 </div>
-                                <div class="sort-by-options__option">
+                                <div class="sort-by-options__option most_sales-option">
                                     Bán chạy
                                 </div>
                                 <div class="select-with-status">
@@ -265,7 +220,18 @@
                                         <span>
                                             <i class="fas fa-chevron-down mr-1"></i>
                                         </span>
-                                        <div></div>
+                                        <div>
+                                            <div class="select-with-status__dropdown modal__transition-enter-done">
+                                                <div
+                                                    class="select-with-status__dropdown-item lowest_price select-with-status__dropdown-item--with-tick">
+                                                    Giá: Thấp đến Cao
+                                                </div>
+                                                <div
+                                                    class="select-with-status__dropdown-item highest_price select-with-status__dropdown-item--with-tick">
+                                                    Giá: Cao đến Thấp
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -375,6 +341,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./asset/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="./asset/js/category.js"></script>
     <script src="./asset/js/ui.js"></script>
     <script src="./asset/js/api.js"></script>
     <script src="./asset/js/app.js"></script>

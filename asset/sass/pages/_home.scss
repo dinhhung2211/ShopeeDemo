@@ -1,10 +1,26 @@
 .container {
   margin-top: 14.9rem;
+  @include responsive(tab-land) {
+    margin-top: 10rem;
+  }
+
+  // @include responsive(phone) {
+  //   margin-top: 10rem;
+  // }
 }
 
 .full-home-banners {
   display: flex;
   height: 23.5rem;
+
+  @include responsive(tab-land) {
+    height: 100%;
+    padding: 0 2rem;
+  }
+
+  // @include responsive(phone) {
+  //   display: none;
+  // }
 
   &__left {
     box-shadow: 0 1px 1px 0 $color-white;
@@ -21,6 +37,10 @@
     flex-direction: column;
     flex: 1 1 0;
     overflow: hidden;
+
+    @include responsive(tab-land) {
+      display: none;
+    }
   }
 
   &__right-banner {
@@ -35,6 +55,15 @@
   }
 }
 
+.full-home-category {
+  display: none;
+  padding: 0 2rem;
+
+  @include responsive(tab-land) {
+    display: flex;
+  }
+}
+
 .full-home-products {
   display: flex;
   margin-top: 2rem;
@@ -42,9 +71,25 @@
   &__filter-panel {
     flex: 0 0 19rem;
     margin: 0 1.25rem 1.25rem 0;
+
+    @include responsive(tab-land) {
+      display: none;
+    }
+
+    @include responsive(phone) {
+      display: none;
+    }
   }
 
   &__main {
     flex: 1;
+
+    @include responsive(tab-land) {
+      padding: 0 2rem;
+    }
+
+    @include responsive(phone) {
+      width: 100%;
+    }
   }
 }

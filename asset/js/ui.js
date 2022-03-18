@@ -1,19 +1,3 @@
-// window.addEventListener('DOMContentLoaded', () => {
-//   document.getElementById('popup').classList.add('popup')
-//   let html = `
-//     <div class="popup__overlay"></div>
-//     <div class="popup__body">
-//         <a href="#" class="popup__link">
-//             <img class="popup__img" src="./asset/img/popup.png">
-//         </a>
-//         <div class="popup__close-btn">
-//             <i class="far fa-times-circle close-btn"></i>
-//         </div>
-//     </div>
-//     `
-//   document.getElementById('popup').innerHTML = html
-// })
-
 document.getElementById('popup').addEventListener('click', (event) => {
   if (event.target.classList.contains('close-btn')) {
     document.getElementById('popup').classList.remove('popup')
@@ -36,6 +20,8 @@ const numberWithCommas = (number) => {
   return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')
 }
 
+console.log()
+
 class Product {
   constructor(productId) {
     this.productId = productId
@@ -54,8 +40,8 @@ class Ui {
 
     const categorys = keywords.reduce((result, current) => {
       result += `
-        <div class="category-list__category-link" data-id="${current.keyword}">
-          ${current.keyword}
+        <div class="category-list__category-link" data-id="${current.category_id}">
+          ${current.category_display_name}
         </div>
         `
       return result
@@ -74,6 +60,37 @@ class Ui {
     document.querySelector('.category-list__body').appendChild(category)
   }
 
+  renderCategoryMobile(keywords) {
+    // Category
+    const _category = document.querySelector('.mobile-category__list')
+    if (_category) {
+      _category.remove()
+    }
+    const category = document.createElement('div')
+    category.className = 'mobile-category__list'
+    category.style = 'height: 294px; padding: 0px;'
+
+    const categorys = keywords.reduce((result, current, currentIndex) => {
+      result += `
+      <div class="mobile-category__item" style="order: ${currentIndex}; width: 10.7rem; height: 14.7rem;" data-id="${current.category_id}">
+        <div class="category-item__img" style="margin: 0px; width: 10.7rem; height: 10.7rem;">
+            <img width="invalid-value" height="invalid-value" alt="${current.category_display_name}"
+                class="category-image" style="object-fit: contain"
+                src="${current.category_image}">
+        </div>
+        <div class="category-item__title">
+          ${current.category_display_name}
+        </div>
+      </div>
+            `
+      return result
+    }, '')
+
+    category.innerHTML = `${categorys}`
+
+    document.querySelector('.mobile-category__body').appendChild(category)
+  }
+
   renderProduct(products) {
     // Product
     const _product = document.querySelector('.search-item-result__items')
@@ -85,7 +102,7 @@ class Ui {
     product.className = 'search-item-result__items'
 
     function itemBage(discount) {
-      if (discount !== 'null') {
+      if (discount !== null) {
         const box = document.createElement('div')
         box.className = 'item-badge-box'
 
@@ -115,18 +132,18 @@ class Ui {
     }
 
     function itemPrice(priceOriginal, priceBeforeDiscount) {
-      if (priceBeforeDiscount !== 0) {
+      if (priceBeforeDiscount > 0) {
         const price = document.createElement('div')
         price.className = 'item-price-original'
         let priceValue = document.createTextNode(
-          numberWithCommas(priceBeforeDiscount)
+          `đ${numberWithCommas(priceBeforeDiscount)}`
         )
         price.appendChild(priceValue)
 
         const priceBefore = document.createElement('div')
         priceBefore.className = 'item-price-discount'
         let priceBeforeValue = document.createTextNode(
-          numberWithCommas(priceOriginal)
+          `đ${numberWithCommas(priceOriginal)}`
         )
         priceBefore.appendChild(priceBeforeValue)
 
@@ -180,7 +197,7 @@ class Ui {
         <a data-sqe="link" href="">
             <div class="item-box">
                 <div class="item-header">
-                    <img src="https://cf.shopee.vn/file/${current.image}"
+                    <img src="${current.image}"
                         alt="" class="item-header__img">
                         ${itemBage(current.discount)}
                 </div>
@@ -191,7 +208,7 @@ class Ui {
                     <div class="item-price">
                         ${itemPrice(
                           current.price,
-                          current.price_before_discount
+                          current.price_max_before_discount
                         )}
                         <div class="item-price-icon-ship">
                             <i class="fas fa-shipping-fast"></i>
@@ -200,15 +217,15 @@ class Ui {
                     <div class="item-rate">
                         <div class="item-rate-farvorite">
                           <i class="fas fa-cart-plus add-to-cart" data-product_id="${
-                            current.itemid
+                            current.item_id
                           }"></i>
                         </div>
-                        ${executeRating(current.C7)}
+                        ${executeRating(current.item_rating.rating_star)}
                         <div class="item-rate-sold">
                             Đã bán ${current.sold}
                         </div>
                     </div>
-                    <div class="item-location">${current.shop_localtion}</div>
+                    <div class="item-location">${current.shop_location}</div>
                 </div>
             </div>
         </a>

@@ -90,6 +90,10 @@
   text-align: center;
   font-size: 2rem;
   margin: 0 1.5rem;
+
+  @include responsive(phone) {
+    min-width: 2rem;
+  }
 }
 
 .page-controller .btn-no-outline {
